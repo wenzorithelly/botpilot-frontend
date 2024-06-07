@@ -6,7 +6,7 @@ export default function InteligenciaArtificial() {
     return (
         <>
             <Head>
-                    <title>Botpilot</title> {/* Change the title here */}
+                    <title>Botpilot</title>
             </Head>
             <Box
                 bgImage="url('/soter.png')"
