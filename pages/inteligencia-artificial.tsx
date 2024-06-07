@@ -6,7 +6,12 @@ export default function InteligenciaArtificial() {
     return (
         <>
             <Head>
-                    <title>Botpilot</title>
+                <title>Sofia, a inteligência artificial da Soter</title>
+                <meta property="og:title" content="Sofia, a inteligência artificial da Soter"/>
+                <meta property="og:description" content="A brief description of your page."/>
+                <meta property="og:image" content="url('/sofia.webp')"/>
+                <meta property="og:url" content="https://botpilot-frontend.vercel.app/inteligencia-artificial"/>
+                <meta property="og:type" content="website"/>
             </Head>
             <Box
                 bgImage="url('/soter.png')"
