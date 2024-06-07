@@ -2,14 +2,6 @@ import React, { useState } from 'react';
 import { Box, Divider, Flex, IconButton, Text, Button } from '@chakra-ui/react';
 import { CloseIcon } from '@chakra-ui/icons';
 
-const iframeStyles = {
-    minWidth: '400px',
-    width: '100%',
-    minHeight: '500px',
-    border: 'none',
-    borderRadius: '8px',
-};
-
 const ChatWidget = () => {
     const [isChatOpen, setIsChatOpen] = useState(false);
 
@@ -25,7 +17,7 @@ const ChatWidget = () => {
                     onClick={toggleChat}
                     size="lg"
                     borderRadius="full"
-                    boxSize="60px"
+                    boxSize={{ base: "50px", md: "60px" }} // Adjust size for smaller screens
                     backgroundImage="url('/sofia.webp')"
                     backgroundSize="130%"
                     backgroundPosition="center"
@@ -40,6 +32,7 @@ const ChatWidget = () => {
                         borderRadius="md"
                         overflow="hidden"
                         mb={2}
+                        w={{ base: "300px", md: "400px" }} // Adjust width for smaller screens
                     >
                         <Text fontSize="md" fontWeight="bold" m={2}>
                             Sofia, a IA da Soter
@@ -47,7 +40,13 @@ const ChatWidget = () => {
                         <Divider mb={2} />
                         <iframe
                             src='https://webchat.botframework.com/embed/my-python-bot-test?s=JE3MEW0m5GQ.ksDLOdPuQCZZa9vHvDdU4pn1J3JecwO8OAVuFrE1zBg'
-                            style={iframeStyles}
+                            style={{
+                                minWidth: '100%',
+                                width: '100%',
+                                minHeight: '400px', // Adjust height for smaller screens
+                                border: 'none',
+                                borderRadius: '8px',
+                            }}
                         ></iframe>
                     </Box>
                     <Flex alignItems="center">
@@ -57,7 +56,7 @@ const ChatWidget = () => {
                             onClick={toggleChat}
                             size="sm"
                             borderRadius="full"
-                            boxSize="60px"
+                            boxSize={{ base: "50px", md: "60px" }} // Adjust size for smaller screens
                             backgroundImage="url('/sofia.webp')"
                             backgroundSize="130%"
                             backgroundPosition="center"
